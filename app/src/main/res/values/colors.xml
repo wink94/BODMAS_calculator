@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <color name="logo_back">#ffffff</color>
+
+
+    <!-- functional button colors-->
+    <color name="colorFuncButtonBG">#efb154</color>
+    <color name="colorFuncButtonTxt">#333333</color>
+
+    <!-- number button colors-->
+    <color name="colorNumButtonBG">#c4c4c4</color>
+    <color name="colorNumButtonTxt">#333333</color>
+
+
+    <!-- equal button colors-->
+    <color name="colorEqlButtonBG">#86e4c1</color>
+
+
+    <!-- screen background colors-->
+    <color name="colorScreebBG">#e2e2e2</color>
+</resources>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorAccent"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/logo_back"
+            android:cropToPadding="true"
+            android:src="@drawable/codefest2"
+            tools:layout_editor_absoluteX="1dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:text="CODEFEST - Calculator"
+            android:textAlignment="center"
+            android:textFontWeight="3"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="3dp"
+            android:textColor="@color/logo_back"/>
+
+
+        <!-- <android.support.v7.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:elevation="12dp"
+            android:id="@+id/view2"
+            app:cardCornerRadius="40dp"
+            android:layout_centerHorizontal="true"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+        </android.support.v7.widget.CardView>-->
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ImageView
+        android:layout_width="168dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/sliit_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_span="4"
+                android:fontFamily="monospace"
+                android:textSize="30dp"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:background="@color/colorScreebBG"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <EditText
+                android:id="@+id/edtInput"
+                android:layout_width="match_parent"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_height="70dp"
+                android:layout_gravity="right"
+                android:layout_span="4"
+                android:fontFamily="monospace"
+                android:inputType="number"
+                android:textSize="40dp"
+                android:background="@color/colorScreebBG"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+           <!-- <Button
+                android:id="@+id/btnCE"
+                android:text="CE"
+                style="@style/FunctionalButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>-->
+
+            <Button
+                android:id="@+id/btnBracket1"
+                android:text="("
+                style="@style/FunctionalButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnBracket2"
+                android:text=")"
+                style="@style/FunctionalButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnC"
+                android:text="C"
+                style="@style/FunctionalButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_span="1"
+                android:text="Del"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                style="@style/FunctionalButtons"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn7"
+                android:text="7"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn8"
+                android:text="8"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn9"
+                android:text="9"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:text="+"
+                style="@style/FunctionalButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn4"
+                android:text="4"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn5"
+                android:text="5"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn6"
+                android:text="6"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:text="-"
+                style="@style/FunctionalButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn1"
+                android:text="1"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:text="2"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn3"
+                android:text="3"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:text="X"
+                style="@style/FunctionalButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn0"
+                android:text="0"
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnDecimal"
+                android:text="."
+                style="@style/NumberButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnResult"
+                android:text="="
+                style="@style/EqualButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btnDivision"
+                android:text="/"
+                style="@style/FunctionalButtons"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
