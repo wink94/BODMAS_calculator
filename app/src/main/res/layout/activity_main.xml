@@ -74,8 +74,8 @@
 
 
     <ImageView
-        android:layout_width="168dp"
-        android:layout_height="166dp"
+        android:layout_width="253dp"
+        android:layout_height="311dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -93,9 +93,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="3dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -110,8 +110,8 @@
 
             <TextView
                 android:id="@+id/txtResult"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
                 android:layout_gravity="right"
                 android:layout_span="4"
                 android:fontFamily="monospace"
@@ -128,7 +128,7 @@
 
             <EditText
                 android:id="@+id/edtInput"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 style="@style/Widget.AppCompat.EditText"
                 android:layout_height="70dp"
                 android:layout_gravity="right"
@@ -136,6 +136,7 @@
                 android:fontFamily="monospace"
                 android:inputType="number"
                 android:textSize="40dp"
+                android:layout_marginRight="50dp"
                 android:background="@color/colorScreebBG"/>
 
         </TableRow>
@@ -158,36 +159,36 @@
                 android:text="("
                 style="@style/FunctionalButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnBracket2"
                 android:text=")"
                 style="@style/FunctionalButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnC"
                 android:text="C"
                 style="@style/FunctionalButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnDelete"
                 android:layout_span="1"
                 android:text="Del"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
                 style="@style/FunctionalButtons"/>
 
         </TableRow>
@@ -201,36 +202,36 @@
                 android:text="7"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btn8"
                 android:text="8"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btn9"
                 android:text="9"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnAdd"
                 android:text="+"
                 style="@style/FunctionalButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
         </TableRow>
 
@@ -243,36 +244,36 @@
                 android:text="4"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btn5"
                 android:text="5"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btn6"
                 android:text="6"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnMinus"
                 android:text="-"
                 style="@style/FunctionalButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
         </TableRow>
 
@@ -285,36 +286,36 @@
                 android:text="1"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btn2"
                 android:text="2"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btn3"
                 android:text="3"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnMultiply"
                 android:text="X"
                 style="@style/FunctionalButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
         </TableRow>
 
@@ -327,36 +328,36 @@
                 android:text="0"
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnDecimal"
                 android:text="."
                 style="@style/NumberButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnResult"
                 android:text="="
                 style="@style/EqualButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
             <Button
                 android:id="@+id/btnDivision"
                 android:text="/"
                 style="@style/FunctionalButtons"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
 
         </TableRow>
 

@@ -61,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        //getSupportActionBar().setTitle("CODEFEST - Calculator");
-        //getSupportActionBar().setIcon(R.drawable.logo);
+
 
         /*
         * retrieve widgets
@@ -104,20 +103,11 @@ public class MainActivity extends AppCompatActivity {
         * functional buttons event handle
         * */
 
-       /* btnCE.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                etInput.setText(null);
-            }
-        });*/
 
         btnBracket1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                /*val1 = Double.NaN;
-                tvOutput.setText(null);
-                etInput.setText(null);*/
 
                 String temp=etInput.getText().toString();
 
@@ -131,9 +121,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*val1 = Double.NaN;
-                tvOutput.setText(null);
-                etInput.setText(null);*/
                 String temp=etInput.getText().toString();
 
                 etInput.setText(temp+") ");
@@ -167,32 +154,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-               /* if(ACTION != null && ACTION.equals("+")){
-                    double result = val1 + Double.parseDouble(etInput.getText().toString());
-                    tvOutput.setText(null);
-                    etInput.setText(roundOFF(result));
-                } else if(ACTION != null && ACTION.equals("-")){
-                    double result = val1 - Double.parseDouble(etInput.getText().toString());
-                    tvOutput.setText(null);
-                    etInput.setText(roundOFF(result));
-                } else if(ACTION != null && ACTION.equals("*")){
-                    double result = val1 * Double.parseDouble(etInput.getText().toString());
-                    tvOutput.setText(null);
-                    etInput.setText(roundOFF(result));
-                } else if(ACTION != null && ACTION.equals("/")){
-                    double result = val1 / Double.parseDouble(etInput.getText().toString());
-                    tvOutput.setText(null);
-                    etInput.setText(roundOFF(result));
-                }
-*/
-
-
-                /*ACTION = null;
-                val1 = Double.NaN;
-                etInput.setSelection(etInput.getText().length());*/
-
-
               double result=BDMAS.evaluate(etInput.getText().toString().trim());
               tvOutput.setText(roundOFF(result));
 
@@ -207,19 +168,23 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ACTION = "+";
 
-                /*if(!Double.isNaN(val1)){
-                    val2 = Double.parseDouble(etInput.getText().toString());
-                    val1 = val1 + val2;
-                } else {
-                    val1 = Double.parseDouble(etInput.getText().toString());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar2=temp.charAt(temp.length()-2);
+                    char lastChar1=temp.charAt(temp.length()-1);
+                    if((lastChar1>='0' && lastChar1<='9') &&(lastChar2>='0' && lastChar2<='9')){
+                        etInput.setText(etInput.getText().toString().trim() + " + ");
+                    }
+                    else
+                        etInput.setText(etInput.getText() + "+ ");
+
                 }
 
-                tvOutput.setText(val1 + " + ");
-                etInput.setText(null);*/
 
-                String temp=etInput.getText().toString();
 
-                etInput.setText(temp+"+ ");
 
             }
         });
@@ -229,19 +194,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ACTION = "-";
 
-                /*if(!Double.isNaN(val1)){
-                    val2 = Double.parseDouble(etInput.getText().toString());
-                    val1 = val1 - val2;
-                } else {
-                    val1 = Double.parseDouble(etInput.getText().toString());
+
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar2=temp.charAt(temp.length()-2);
+                    char lastChar1=temp.charAt(temp.length()-1);
+                    if((lastChar1>='0' && lastChar1<='9') &&(lastChar2>='0' && lastChar2<='9')){
+                        etInput.setText(etInput.getText().toString().trim() + " - ");
+                    }
+                    else
+                        etInput.setText(etInput.getText() + "- ");
+
                 }
-
-                tvOutput.setText(val1 + " - ");
-                etInput.setText(null);*/
-
-                String temp=etInput.getText().toString();
-
-                etInput.setText(temp+"- ");
 
             }
         });
@@ -251,19 +218,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ACTION = "*";
 
-                /*if(!Double.isNaN(val1)){
-                    val2 = Double.parseDouble(etInput.getText().toString());
-                    val1 = val1 * val2;
-                } else {
-                    val1 = Double.parseDouble(etInput.getText().toString());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar2=temp.charAt(temp.length()-2);
+                    char lastChar1=temp.charAt(temp.length()-1);
+                    if((lastChar1>='0' && lastChar1<='9') &&(lastChar2>='0' && lastChar2<='9')){
+                        etInput.setText(etInput.getText().toString().trim() + " X ");
+                    }
+                    else
+                        etInput.setText(etInput.getText() + "X ");
+
                 }
-
-                tvOutput.setText(val1 + " * ");
-                etInput.setText(null);*/
-
-                String temp=etInput.getText().toString();
-
-                etInput.setText(temp+"X ");
 
 
             }
@@ -274,19 +242,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ACTION = "/";
 
-                /*if(!Double.isNaN(val1)){
-                    val2 = Double.parseDouble(etInput.getText().toString());
-                    val1 = val1/val2;
-                } else {
-                    val1 = Double.parseDouble(etInput.getText().toString());
-                }*/
 
-                /*tvOutput.setText(val1 + " / ");
-                etInput.setText(null);*/
 
-                String temp=etInput.getText().toString();
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
 
-                etInput.setText(temp+"/ ");
+                    String temp=etInput.getText().toString();
+                    char lastChar2=temp.charAt(temp.length()-2);
+                    char lastChar1=temp.charAt(temp.length()-1);
+                    if((lastChar1>='0' && lastChar1<='9') &&(lastChar2>='0' && lastChar2<='9')){
+                        etInput.setText(etInput.getText().toString().trim() + " / ");
+                    }
+                    else
+                        etInput.setText(etInput.getText() + "/ ");
+
+                }
+
+
 
             }
         });
@@ -299,80 +270,270 @@ public class MainActivity extends AppCompatActivity {
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "0 ");
-                etInput.setSelection(etInput.getText().length());
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "0");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "0 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "0 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
             }
         });
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "1 ");
-                etInput.setSelection(etInput.getText().length());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "1");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "1 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "1 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
             }
         });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "2 ");
-                etInput.setSelection(etInput.getText().length());
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "2");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "2 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "2 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
+
             }
         });
 
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "3 ");
-                etInput.setSelection(etInput.getText().length());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "3");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "3 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "3 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
             }
         });
 
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "4 ");
-                etInput.setSelection(etInput.getText().length());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "4");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "4 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "4 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
             }
         });
 
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "5 ");
-                etInput.setSelection(etInput.getText().length());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "5");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "5 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "5 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
             }
         });
 
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "6 ");
-                etInput.setSelection(etInput.getText().length());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "6");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "6 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "6 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
+
             }
         });
 
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "7 ");
-                etInput.setSelection(etInput.getText().length());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "7");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "7 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "7 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
+
             }
         });
 
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "8 ");
-                etInput.setSelection(etInput.getText().length());
+
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "8");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "8 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "8 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
             }
         });
 
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etInput.setText(etInput.getText() + "9 ");
-                etInput.setSelection(etInput.getText().length());
+
+                if(!etInput.getText().toString().equalsIgnoreCase("")){
+
+                    String temp=etInput.getText().toString();
+                    char lastChar=temp.charAt(temp.length()-2);
+                    if(lastChar>='0' && lastChar<='9'){
+                        etInput.setText(etInput.getText().toString().trim() + "9");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                    else {
+                        etInput.setText(etInput.getText() + "9 ");
+                        etInput.setSelection(etInput.getText().length());
+                    }
+                }
+
+                else {
+                    etInput.setText(etInput.getText() + "9 ");
+                    etInput.setSelection(etInput.getText().length());
+                }
+
             }
         });
 
